@@ -713,7 +713,8 @@ setup(void)
 	win = XCreateWindow(dpy, parentwin, x, y, mw, mh, border_width,
 	                    CopyFromParent, CopyFromParent, CopyFromParent,
 	                    CWOverrideRedirect | CWBackPixel | CWEventMask, &swa);
-	XSetWindowBorder(dpy, win, scheme[SchemeSel][ColBg].pixel);
+	if (border_width)
+		XSetWindowBorder(dpy, win, scheme[SchemeSel][ColBg].pixel);
 	XSetClassHint(dpy, win, &ch);
 
 
@@ -791,6 +792,8 @@ main(int argc, char *argv[])
 			colors[SchemeSel][ColFg] = argv[++i];
 		else if (!strcmp(argv[i], "-w"))   /* embedding window id */
 			embed = argv[++i];
+		else if (!strcmp(argv[i], "-bw"))  /* border width */
+			border_width = atoi(argv[++i]);
 		else
 			usage();
 

@@ -4,6 +4,8 @@ dmenu \- dynamic menu
 .SH SYNOPSIS
 .B dmenu
 .RB [ \-bfiv ]
+.RB [ \-bw 
+.IR borderwidth ]
 .RB [ \-l
 .IR lines ]
 .RB [ \-h
@@ -41,6 +43,9 @@ which lists programs in the user's $PATH and runs the result in their $SHELL.
 .TP
 .B \-b
 dmenu appears at the bottom of the screen.
+.TP
+.B \-bw " borderwidth"
+dmenu overrides default border width, with the given width in pixels.
 .TP
 .B \-c
 dmenu appears centered on the screen.
