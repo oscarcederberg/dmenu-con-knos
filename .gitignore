@@ -1,0 +1,12 @@
+# Ignore build files
+config.h
+dmenu
+dmenu.o
+drw.o
+stest
+stest.o
+util.o
+
+# Ignore patch files
+dmenu.c.orig
+dmenu.c.rej
