@@ -4,6 +4,7 @@ dmenu is an efficient dynamic menu for X. This contains patches that I've added 
 ## Patches
 * border - Adds a border around dmenu.
 * center - Adds an option to center dmenu on screen with `-c`-flag.
+* lineheight - Adds an option to increase the height of dmenu with '-h height'-flag.
 
 ## Installation
 ```
